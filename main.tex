@@ -1,0 +1,160 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\author{Nico Fröhlich}
+\begin{document}
+\begin{center}
+\huge \textbf{Lösung von Nullstellen}
+\end{center}
+\section{Ausklammern}
+\subsection{Verwendung}
+Ausklammern wird verwendet um den Exponenten eines Polynomes um 1 zu reduzieren. Es kann nur angewendet werden wenn jedes Monom die auszuklammernde Variable (meist x) enthält. Dieses verfahren kommt meist bei einem Polynomgrad von 3 zum Einsatz (Also der größte Exponent ist 3)
+
+\subsubsection*{Frage: Bei welchen Gleichungen solltest du Ausklammern?}
+\begin{eqnarray}
+3x^2 + 3x + 3 = 0\\
+5x^3 + 6x^2 + 1 = 0\\
+23x^3 + 2x^2 + 9x = 0\\
+9x^4 + 3x^2 = 0
+\end{eqnarray}
+
+\subsection{Anwendung}
+In erster Linie klammert man nach x aus. Wer hätte es gedacht! Nehmen wir zum Beispiel die Gleichung $23x^3 + 2x^2 + 9x = 0 \rightarrow x(23x^2 + 2x + 9) = 0$. Dabei ist es wichtig, dass sobald man ausklammern kann eine der Nullstellen bei $x = 0$ liegt. Dies sieht man relativ schnell, da dann der Vorfaktor der Klammer null ist daraus Resultiert, dass der gesamte Term null wird. In der Klammer haben wir nun einen weiteren Term, bei diesem können wir dann wieder mit Hilfe der PQ oder Mitternachtsformel die Nullstellen herausfinden, da dies ein neutraler Faktor der Gleichung ist gilt hier das selbe. Wenn $23x^2 + 2x + 9 = 0 \rightarrow 23x^3 + 2x^2 + 9x = 0$.
+\subsubsection*{Aufgaben}
+\begin{eqnarray}
+4x^3 + 5x^2 + 6x\\
+2x^3 + 4x^2 + 2x
+\end{eqnarray}
+
+\newpage
+
+\subsection{Lösungen 1}
+
+\subsubsection*{1}
+
+\begin{enumerate}
+\item Hier braucht man nicht auszuklammern. Es reicht die PQ oder Mitternachtsformel
+\item Achtung! Hier kannst du nicht ausklammern! (Wegen der + 1)
+\item \textbf{JA}
+\item \textbf{JA}
+\end{enumerate}
+
+\subsubsection*{2}
+
+\begin{eqnarray}
+4x^3 + 5x^2 + 6x\\
+x(4x^2 + 5x + 6) \rightarrow x_1 = 0\\
+4x^2 + 5x + 6 \quad \text{\textbar} : 4\\
+x^2 + \dfrac{5}{4} x + \dfrac{3}{2}\\
+-\dfrac{5}{8} \pm \sqrt{(\dfrac{5}{8})^2 - \dfrac{3}{2}} \rightarrow \text{Keine weiter Lösungen}
+\end{eqnarray}
+
+\begin{eqnarray}
+2x^3 + 4x^2 + 2x\\
+x(2x^2 + 4x + 2) \rightarrow x_1 = 0\\
+2x^2 + 4x + 2 \quad \text{\textbar} : 2\\
+x^2 + 2x + 1\\
+-1 \pm \sqrt{1-\dfrac{1}{2}}\\
+x_2 = -0.29, x_3 = -1.7
+\end{eqnarray}
+
+\newpage
+
+\section{Substitution}
+
+\subsection{Verwendung}
+Substitution verwendet man ebenfalls um den Polynomgrad um 1 zu reduzieren. Es kann nur bei Geraden Exponenten Angewendet werden.
+
+\subsubsection*{Frage: Bei welchen Gleichungen solltest du Substituieren?}
+\begin{eqnarray}
+3x^3 + 3x + 3 = 0\\
+5x^4 + 6x + 1 = 0\\
+4x^4 + 6x^2 + 1 = 0\\
+9x^4 + 3x^2 = 0
+\end{eqnarray}
+
+\subsection{Anwendung}
+Bei der Substitution ersetzen (substituieren) wir $x^2$ mit einer variable. Daher definieren wir $u = x^2$. Wir nehmen also als Beispiel $4x^4 + 6x^2 + 1 = 0$ und substituieren dort $u \rightarrow 4u^2 + 6u + 1 = 0$. Wie man nun relativ eindeutig sieht können wir die Gleichung nach u Auflösen mit Hilfe der PQ bzw. Mitternachtsformel. Nicht vergessen man ist danach noch nicht fertig. Man muss nun noch u wieder nach x Auflösen dazu stellt man die Definition um $u = x^2 \rightarrow x = \sqrt{u}$.
+
+\subsubsection*{Aufgaben}
+\begin{eqnarray}
+2x^4 + 8x^2 + 6\\
+4x^4 + 4x^2 - 8
+\end{eqnarray}
+
+\newpage
+
+\subsection{Lösungen 2}
+
+\subsubsection*{1}
+\begin{enumerate}
+\item Hier kannst du nicht substituieren da ungerade Exponenten in der Gleichung sind
+\item Hier kannst du nicht substituieren da ungerade Exponenten in der Gleichung sind
+\item \textbf{JA}
+\item Du brauchst hier nicht Substituieren, du kannst nach $x^2$ ausklammern. $x^2(9x^2 + 3) \rightarrow 9x^2 = -3 \rightarrow$ Keine weitere Lösung außer $x_1 = 0$
+\end{enumerate}
+
+\subsubsection*{2}
+
+\begin{eqnarray}
+2x^4 + 8x^2 + 6\\
+u = x^2\\
+2u^2 + 8u + 6\\
+u^2 + 4u + 3 \quad \text{\textbar} : 2\\
+-2 \pm \sqrt{2^2 -3}\\
+u_1 = -1, u_2 = -3\\
+x_1 = \sqrt{-1}, x_2 = \sqrt{-3} \rightarrow \text{Keine Lösungen}
+\end{eqnarray}
+
+\begin{eqnarray}
+4x^4 + 4x^2 - 8\\
+u = x^2\\
+4u^2 + 4u - 8\\
+4u^2 + 4u - 8 \quad \text{\textbar} : 4\\
+u^2 + u - 2\\
+-\dfrac{1}{2} \pm \sqrt{\dfrac{1}{4} + 2}\\
+-\dfrac{1}{2} \pm \sqrt{\dfrac{1}{4} + 2}\\
+u_1 = 1, u_2 = -2 \rightarrow u_2 \quad \text{gibt keine Lösung}\\
+x_1, x_2 = \pm \sqrt{1} = \pm 1
+\end{eqnarray}
+
+\newpage
+
+\section{Polynomdivision}
+
+\subsection{Verwendung}
+Wenn nichts anderes funktioniert. Das hier ist die letzte Verteidigungslinie so zu sagend.
+
+\subsubsection*{Frage: Bei welchen Gleichungen solltest du Polynomdivision anwenden?}
+\begin{eqnarray}
+3x^3 + 3x + 3 = 0\\
+\dfrac{2}{5} x^4 + 5x + 3 = 0\\
+x^4 + 6x^2 + 1 = 0\\
+3x^4 + \dfrac{3}{6} x^2 = 0
+\end{eqnarray}
+
+\subsection{Anwendung}
+Zuerst müssen wir eine Nullstelle raten. Diese liegt normalerweise zwischen -4 und 4 (Ganzzahl). Dabei ist es nicht schlimm wenn wir aus versehen direkt am Anfang die richtige Nullstelle "raten". Wenn wir unsere Nullstelle vom Taschenrechner erraten lassen haben. Beginnen wir unsere Polynomdivision. Beispiel:
+
+\begin{eqnarray}
+4x^3 + 4x^2 + \dfrac{1}{2} x + \dfrac{1}{2} \\
+\end{eqnarray}
+
+\newpage
+
+\subsection{Lösungen 3}
+
+\subsubsection*{1}
+
+\begin{enumerate}
+\item \textbf{JA}
+\item \textbf{JA}
+\item Substitution
+\item Ausklammern
+\end{enumerate}
+
+\end{document}
