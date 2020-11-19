@@ -1,0 +1,172 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\begin{document}
+\begin{center}
+\huge \textbf{Kurvendiskussion}
+\end{center}
+
+\section{Allgemein}
+
+Bei der Kurvendiskussion geht es Primär darum eine Funktion zu beschreiben. Dabei müssen Folgende Informationen ermittelt werden.
+
+\begin{itemize}
+\item Achsenschnittpunkte (x, y)
+\item Extremata
+\item Wendepunkte
+\item Symmetrie
+\end{itemize}
+
+Des weiteren können folgende Sachen Abgefragt werden:
+
+\begin{itemize}
+\item Monotonie
+\item Krümmung
+\end{itemize}
+
+Für alle Berechnungen brauchen wir die Ableitungen. Daher ist es ratsam die ersten drei Ableitungen direkt am Anfang zu berechnen und hin zu schreiben.
+
+\section{Achsenschnittpunkte}
+
+Wiederholung: Die X-Achsenschnittpunkte sind die Nullstellen der original Funktion. Zur Lösung von Nullstellen siehe des Skript der letzten Woche. Um den Y-Achsenschnittpunkt aus zu rechnen wird für x einfach 0 eingesetzt.
+
+\newpage
+
+\section{Extremata}
+
+Um nun ein Extrempunkt aus zu rechnen muss man die Nullstellen der ersten Ableitung $f'(x)$ ausrechnen. Denn $f'(x)$ beschreibt die locale Änderung einer Funktion wenn diese Änderung (also die Tangentensteigung bzw $f'(x)$) also 0 ist dann kann es einen Extrempunkt geben. Um nun aber fest zu stellen ob es ein Hoch oder Tiefpunkt ist brauchen wir die zweite Ableitung $f''(x)$. Daher nimmt man nun die Ausgerechneten Nullstellen und setzt diese in $f''(x)$ wenn das Ergebnis größer null Handelt es sich um einen Tiefpunkt wenn das Ergebnis kleiner null einen Hochpunkt.
+\newline
+\newline
+TL;DR
+\begin{itemize}
+\item $f'(x) = 0$
+\item Tiefpunkt $f''(x) > 0$
+\item Hochpunkt $f''(x) < 0$
+\item Kein Extrempunkt $f''(x) = 0$
+\end{itemize}
+
+\section{Wendepunkt (Sattelpunkt)}
+Beim Wendepunkt ist es ähnlich nur muss man hier die Nullstellen der zweiten Ableitung Ausrechnen und in die dritte Ableitung einsetzen. Wenn $f'''(x) \neq 0$ gibt es hier einen Wendepunkt.
+\newline
+\newline
+TL;DR
+\begin{itemize}
+\item $f''(x) = 0$
+\item Wendepunkt $f'''(x) \neq 0$
+\item Kein Wendepunkt $f'''(x) = 0$
+\end{itemize}
+
+\section{Symmetrie}
+Die Symmetrie lässt sich meist schon anhand der Exponenten erkennen. Gibt es nur Gerade Exponenten so ist die Funktion Achsen-symmetrisch, gibt es nur ungerade so ist sie Punkt-symmetrisch, sind die Exponenten gemischt so gibt es keine Symmetrie.
+
+\newpage
+
+\section{Aufgaben}
+
+Analysieren sie folgende Funktionen. Erstellen sie auf Basis ihrer Analyse ein Schaubild.
+
+\begin{eqnarray}
+f(x) = 4x^2 + 12x\\
+f(x) = 4x^2 + 12\\
+f(x) = 4x^3 + 12x + 16\\
+f(x) = 53x^5 + 21x
+\end{eqnarray}
+
+\newpage
+\section{Lösungen}
+
+\subsection{$f(x) = 4x^2 + 12x$}
+Errechnung der Nullstellen
+\begin{eqnarray}
+4x^2 + 12x = 0\\
+x(4x + 12) = 0 \rightarrow x_0 = 0\\
+4x + 12 = 0\\
+4x = -12\\
+x_1 = -3
+\end{eqnarray}
+N(0\textbar 0) und N(-3\textbar 0) Y-Achsenschnittpunkt S(0\textbar 0)
+\newline
+Ab hier brauchen wir die Ableitungen.
+\begin{eqnarray}
+f'(x) = 8x + 12\\
+f''(x) = 8
+\end{eqnarray}
+
+Errechnung der Extremata
+\begin{eqnarray}
+8x + 12 = 0\\
+8x = -12\\
+x = -\dfrac{3}{2}\\
+f''(-\dfrac{3}{2}) > 0 \rightarrow \text{Tiefpunkt}\\
+4(-\dfrac{3}{2})^2 + 12(-\dfrac{3}{2})\\
+y = -9\\
+\end{eqnarray}
+T($-\dfrac{3}{2}$\textbar -9)
+\newline
+Keine Wendepunkte da $f''(x) \neq 0$
+\newpage
+
+\subsection{$f(x) = 4x^2 + 12$}
+Nullstellen
+\begin{eqnarray}
+4x^2 + 12 = 0\\
+4x^2 = -12\\
+x^2 = -3\\
+x = \sqrt{-3} \rightarrow \text{Keine Nullstellen}\\
+f(0) = 12
+\end{eqnarray}
+Y-Achsenschnittpunkt S(0\textbar 12)
+
+\begin{eqnarray}
+f'(x) = 8x
+f''(x) = 8
+\end{eqnarray}
+
+Extremata
+\begin{eqnarray}
+8x = 0 \rightarrow x = 0\\
+f''(x) > 0 \rightarrow \text{Tiefpunkt}\\
+f(0) = 12
+\end{eqnarray}
+T(0\textbar 12)
+\newpage
+
+\subsection{$f(x) = 4x^3 + 12x + 16$}
+
+Nullstellen mit der lustigen Polynomdivision (geratene Nullstelle -1)
+\begin{eqnarray}
+4x^3 + 0x^2 + 12x + 16 : (x + 1) = 4x^2 - 4x + 16\\
+4x^3 + 4x^2\qquad \qquad \qquad \qquad\qquad\qquad\qquad\qquad \\
+-4x^2 + 12x \qquad \qquad\qquad\qquad\qquad\qquad\qquad\\
+-4x^2 - 4x \qquad \qquad\qquad\qquad\qquad\qquad\qquad\\
+16x + 16\qquad\qquad\qquad\qquad\qquad\qquad\\
+16x + 16\qquad\qquad\qquad\qquad\qquad\qquad
+\end{eqnarray}
+
+\begin{eqnarray}
+4x^2 - 4x + 16 = 0\\
+x^2 - x + 4 = 0\\
+\dfrac{1}{2} \pm \sqrt{\dfrac{1}{4} - 4} \rightarrow \text{Keine weitere Lösung}
+\end{eqnarray}
+S(-1\textbar 0) Y-Achsenschnittpunkt S(0\textbar 16)
+
+Ableitungen
+\begin{eqnarray}
+f'(x) = 12x^2 + 12
+f''(x) = 24x
+f'''(x) = 24
+\end{eqnarray}
+
+Extremata
+\begin{eqnarray}
+12x^2 + 12 = 0\\
+12x^2 = -12\\
+x^2 = -1 \rightarrow \sqrt{-1} \text{Keine Extremata}
+\end{eqnarray}
+
+Wende
+
+\end{document}
